@@ -20,7 +20,6 @@ void Zombie::init(float speed, glm::vec2 position)
 
 void Zombie::update(const std::vector<std::string>& levelData)
 {
-	//static std::mt19937 randomEngine(time(nullptr));
 	_position = _direction * _speed;
 }
 

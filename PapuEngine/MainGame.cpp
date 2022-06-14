@@ -41,13 +41,13 @@ void MainGame::initLevel() {
 
 	}
 
-	/*for (int i = 0; i < _levels[_currenLevel]->getNumZombies(); i++)
+	for (int i = 0; i < _levels[_currenLevel]->getNumZombies(); i++)
 	{
 		_zombies.push_back(new Zombie());
 		glm::vec2 pos(randPosX(randomEngine) * TILE_WIDTH,
 			randPosY(randomEngine) * TILE_WIDTH);
 		_zombies.back()->init(1.0f, pos);
-	}*/
+	}
 }
 
 void MainGame::initShaders() {
@@ -83,10 +83,10 @@ void MainGame::draw() {
 	{
 		_humans[i]->draw(_spriteBacth);
 	}
-	/*for (size_t i = 0; i < _zombies.size(); i++)
+	for (size_t i = 0; i < _zombies.size(); i++)
 	{
 		_zombies[i]->draw(_spriteBacth);
-	}*/
+	}
 	_spriteBacth.end();
 	_spriteBacth.renderBatch();
 
