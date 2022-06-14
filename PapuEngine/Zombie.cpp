@@ -6,7 +6,7 @@
 void Zombie::init(float speed, glm::vec2 position)
 {
 	_speed = speed;
-	_color.set(255, 255, 0, 255); //Amarillo
+	_color.set(0, 255, 0, 255); //Verde
 	_position = position;
 	static std::mt19937 randomEngine(time(nullptr));
 	static std::uniform_real_distribution<float>randDir(-1.0f, 1.0f);
