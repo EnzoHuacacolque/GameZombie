@@ -36,7 +36,7 @@ void MainGame::initLevel() {
 	{
 		_humans.push_back(new Human());
 		glm::vec2 pos(randPosX(randomEngine) * TILE_WIDTH,
-			randPosY(randomEngine)* TILE_WIDTH);
+			randPosY(randomEngine) * TILE_WIDTH);
 		_humans.back()->init(1.0f, pos);
 
 	}
@@ -44,6 +44,7 @@ void MainGame::initLevel() {
 	for (int i = 0; i < _levels[_currenLevel]->getNumZombies(); i++)
 	{
 		_zombies.push_back(new Zombie());
+		//_zombies.back()->init(1.0f, _levels[_currenLevel]->getZombiesPosition());
 		glm::vec2 pos(randPosX(randomEngine) * TILE_WIDTH,
 			randPosY(randomEngine) * TILE_WIDTH);
 		_zombies.back()->init(1.0f, pos);
@@ -162,10 +163,10 @@ void MainGame::update() {
 			_humans[i]->update(_levels[_currenLevel]->getLevelData());
 		}
 
-		/*for (size_t i = 0; i < _zombies.size(); i++)
+		for (size_t i = 0; i < _zombies.size(); i++)
 		{
 			_zombies[i]->update(_levels[_currenLevel]->getLevelData());
-		}*/
+		}
 		
 	}
 }
